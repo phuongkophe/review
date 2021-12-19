@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <input id="insertContent" type="text">
+        <button type="button" onclick="addButton()">Add</button>
+        <br>
+<!--        <button id="newButton"></button>-->
+    <script>
+       function addButton() {
+           let a = document.getElementById('insertContent').value;
+           if (a == ''){
+               alert('Bạn chưa nhập nội dung');
+           }else{
+               let btn = document.createElement("button");
+               btn.innerHTML = document.getElementById('insertContent').value;
+               document.body.appendChild(btn);
+           }
+       }
+    </script>
+</body>
+</html>
